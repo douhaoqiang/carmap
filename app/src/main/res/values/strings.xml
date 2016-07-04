@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">车辆轨迹</string>
+
+    <string name="car_select_car">GPS 选择车辆</string>
+    <string name="car_map_msg">GPS 地理信息</string>
+    <string name="car_path_msg">GPS 轨迹信息</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="cycle_get">重试</string>
+
+
+</resources>

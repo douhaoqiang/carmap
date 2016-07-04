@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header"/>
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_root_view">
+    </com.amap.api.maps2d.MapView>
+
+    <Button
+        android:id="@+id/move_mylocation_btn"
+        android:layout_width="@dimen/dp750_60"
+        android:layout_height="@dimen/dp750_60"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dp750_30"
+        android:layout_marginBottom="@dimen/dp750_30"
+        android:background="@drawable/location_btn_selector"/>
+
+    <TextView
+        android:id="@+id/finish_btn"
+        android:layout_width="@dimen/dp750_100"
+        android:layout_height="@dimen/dp750_100"
+        android:layout_marginRight="@dimen/dp750_30"
+        android:layout_marginBottom="@dimen/dp750_30"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="结束"
+        android:textColor="@color/clr_0a091b"
+        android:textSize="@dimen/sp750_30"
+        android:background="@drawable/button_circle_red_selector"/>
+
+</RelativeLayout>
+

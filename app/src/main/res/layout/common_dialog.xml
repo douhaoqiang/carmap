@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#c0000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp750_580"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_dialog"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp750_35"
+            android:paddingLeft="@dimen/dp750_40"
+            android:paddingRight="@dimen/dp750_40"
+            android:paddingTop="@dimen/dp750_35">
+
+            <TextView
+                android:id="@+id/common_dialog_line1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/dp750_30" />
+
+            <TextView
+                android:id="@+id/common_dialog_line2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/dp750_30" />
+
+            <TextView
+                android:id="@+id/common_dialog_line3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/dp750_30" />
+
+            <TextView
+                android:id="@+id/common_dialog_why_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp750_35"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/dp750_30" />
+
+            <RelativeLayout
+                android:id="@+id/common_dialog_underline"
+                android:layout_width="@dimen/dp750_420"
+                android:layout_height="@dimen/dp750_2"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/clr_1bcbec" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp750_1"
+            android:src="@color/clr_bcbbc4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp750_88"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/common_dialog_left_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/dp750_34" />
+
+            <TextView
+                android:id="@+id/common_dialog_right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/dp750_34"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

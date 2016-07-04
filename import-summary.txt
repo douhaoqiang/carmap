@@ -1,0 +1,83 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\.name
+* .idea\HelloWorld.iml
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\encodings.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\workspace.xml
+* CarPath.iml
+* HelloWorld1.apk
+* ant.properties
+* build.xml
+* key\
+* key\debug.keystore
+* key\key.jks
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.4.jar => version 2.2.4 in com.google.code.gson:gson:2.2.4
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* libs\AMap_2DMap_V2.8.1_20160202.jar => app\libs\AMap_2DMap_V2.8.1_20160202.jar
+* libs\AMap_Location_v2.3.0_20160112.jar => app\libs\AMap_Location_v2.3.0_20160112.jar
+* libs\AMap_Search_V3.2.1_20160308.jar.jar => app\libs\AMap_Search_V3.2.1_20160308.jar.jar
+* libs\android-query-0.25.10-renzhan.jar => app\libs\android-query-0.25.10-renzhan.jar
+* libs\android-support-v13.jar => app\libs\android-support-v13.jar
+* libs\eventbus-2.2.0.jar => app\libs\eventbus-2.2.0.jar
+* libs\ormlite-android-4.48.jar => app\libs\ormlite-android-4.48.jar
+* libs\ormlite-core-4.48.jar => app\libs\ormlite-core-4.48.jar
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

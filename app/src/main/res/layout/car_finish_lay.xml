@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_fafafa">
+
+    <include layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_root_view"
+        android:divider="@drawable/h_line"
+        android:showDividers="middle|end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:paddingLeft="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_200"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="车辆："
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <TextView
+                android:id="@+id/finish_car_code_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp750_80"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:paddingLeft="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_200"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="司机："
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <TextView
+                android:id="@+id/finish_driver_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp750_80"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:paddingLeft="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_200"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="仓库："
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <TextView
+                android:id="@+id/finish_wearroom_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp750_80"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:paddingLeft="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_200"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="开始时间："
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <TextView
+                android:id="@+id/finish_begin_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp750_80"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:paddingLeft="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_200"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="结束时间："
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <TextView
+                android:id="@+id/finish_end_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp750_80"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:paddingLeft="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_200"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="总共用时："
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <TextView
+                android:id="@+id/finish_time_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp750_80"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:paddingLeft="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_200"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="行驶里程："
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <TextView
+                android:id="@+id/finish_distance_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp750_80"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/dp750_500"
+        android:layout_height="@dimen/dp750_100"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp750_100"
+        android:background="@drawable/button_open_car_selector"
+        android:text="返回"
+        android:textColor="@color/clr_0a091b"
+        android:textSize="@dimen/dp750_40" />
+
+</RelativeLayout>

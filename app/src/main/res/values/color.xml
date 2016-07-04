@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="half_transparent">#80000000</color>
+    <color name="clr_bg">#f3f3f5</color>
+    <color name="clr_fafafa">#fafafa</color>
+    <color name="clr_0a091b">#0a091b</color>
+    <color name="clr_bcbbc4">#bcbbc4</color>
+    <color name="clr_b0edf9">#b0edf9</color>
+    <color name="clr_1bcbec">#1bcbec</color>
+    <color name="clr_ffffff">#ffffff</color>
+    <color name="clr_ff0000">#ff0000</color>
+    <color name="clr_f2f2b3">#f2f2b3</color>
+    <color name="clr_603e1b">#603e1b</color>
+
+</resources>

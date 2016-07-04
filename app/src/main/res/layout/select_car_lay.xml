@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_fafafa">
+
+    <include layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_root_view"
+        android:layout_marginTop="@dimen/dp750_30"
+        android:paddingLeft="@dimen/dp750_30"
+        android:paddingRight="@dimen/dp750_30"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/select_wearroom_lay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:background="@drawable/shape_button_8_radius_white"
+            android:paddingLeft="@dimen/dp750_30"
+            android:paddingRight="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_100"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="仓库"
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <ImageView
+                android:id="@+id/select_wearroom_iv"
+                android:layout_width="@dimen/dp750_30"
+                android:layout_height="@dimen/dp750_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/down" />
+
+            <TextView
+                android:id="@+id/select_wearroom_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dp750_200"
+                android:gravity="center_vertical"
+                android:hint="请选择仓库"
+                android:textColorHint="@color/clr_bcbbc4"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:layout_marginTop="@dimen/dp750_20"
+            android:background="@drawable/shape_button_8_radius_white"
+            android:paddingLeft="@dimen/dp750_30"
+            android:paddingRight="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_100"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="城市"
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <ImageView
+                android:id="@+id/select_city_iv"
+                android:layout_width="@dimen/dp750_30"
+                android:layout_height="@dimen/dp750_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/down"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/select_city_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp750_200"
+                android:hint=""
+                android:textColorHint="@color/clr_bcbbc4"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/select_car_lay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:layout_marginTop="@dimen/dp750_20"
+            android:background="@drawable/shape_button_8_radius_white"
+            android:paddingLeft="@dimen/dp750_30"
+            android:paddingRight="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_100"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="车辆"
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <ImageView
+                android:id="@+id/select_car_iv"
+                android:layout_width="@dimen/dp750_30"
+                android:layout_height="@dimen/dp750_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/down" />
+
+            <TextView
+                android:id="@+id/select_car_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp750_200"
+                android:hint="请选择车辆"
+                android:textColorHint="@color/clr_bcbbc4"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/select_driver_lay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp750_80"
+            android:layout_marginTop="@dimen/dp750_20"
+            android:background="@drawable/shape_button_8_radius_white"
+            android:paddingLeft="@dimen/dp750_30"
+            android:paddingRight="@dimen/dp750_30">
+
+            <TextView
+                android:layout_width="@dimen/dp750_100"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="司机"
+                android:textColor="@color/clr_0a091b"
+                android:textSize="@dimen/sp750_30" />
+
+            <ImageView
+                android:id="@+id/select_driver_iv"
+                android:layout_width="@dimen/dp750_30"
+                android:layout_height="@dimen/dp750_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/down" />
+
+            <TextView
+                android:id="@+id/select_driver_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp750_200"
+                android:hint="请选择司机"
+                android:textColorHint="@color/clr_bcbbc4"
+                android:text=""
+                android:textColor="@color/clr_1bcbec"
+                android:textSize="@dimen/sp750_30" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/select_start_btn"
+        android:layout_width="@dimen/dp750_500"
+        android:layout_height="@dimen/dp750_100"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp750_100"
+        android:background="@drawable/button_open_car_selector"
+        android:text="开始"
+        android:textColor="@color/clr_0a091b"
+        android:textSize="@dimen/dp750_40" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue">
+
+    <ImageView
+        android:id="@+id/splash_iv"
+        android:layout_width="@dimen/dp750_356"
+        android:layout_height="@dimen/dp750_392"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp750_230"
+        android:src="@drawable/icon"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/splash_iv"
+        android:layout_marginTop="@dimen/dp750_20"
+        android:gravity="center_horizontal"
+        android:text="车辆轨迹跟踪"
+        android:textColor="@color/clr_fafafa"
+        android:textSize="@dimen/dp750_80"/>
+
+
+
+</RelativeLayout>
