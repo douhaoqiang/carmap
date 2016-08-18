@@ -4,8 +4,9 @@ package com.china;
  * Created by Administrator on 2016/5/12.
  */
 public class GlobalConstants {
-    public static final String DISPATCH_URL ="http://1.119.1.2";//接口地址
-    public static final int PORT=40004;//端口号
+    private static final String DISPATCH_URL ="http://1.119.1.2";//接口地址
+    private static final int DISPATCH_PORT=40004;//任务的端口号
+    private static final int UDP_PORT=40004;//Udp请求端口号
 
     public static String token;
     public static String SystemVersion;
@@ -21,7 +22,7 @@ public class GlobalConstants {
      * @return
      */
     public static String getDispatchRootUrl(){
-        return DISPATCH_URL+":"+PORT;
+        return DISPATCH_URL+":"+DISPATCH_PORT;
     }
 
     /**
@@ -37,7 +38,7 @@ public class GlobalConstants {
      * @return
      */
     public static int getUdpPort(){
-        return PORT;
+        return UDP_PORT;
     }
 
 }

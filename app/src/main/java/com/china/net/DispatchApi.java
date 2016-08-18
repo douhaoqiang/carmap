@@ -40,7 +40,7 @@ public class DispatchApi<T> extends BaseProtocol<T> {
 
 	@Override
 	protected String getRootUrl() {
-		return GlobalConstants.DISPATCH_URL;
+		return GlobalConstants.getDispatchRootUrl();
 	}
 
 	@Override
