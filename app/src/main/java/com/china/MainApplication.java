@@ -2,10 +2,13 @@ package com.china;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Environment;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
 import com.androidquery.util.AQUtility;
@@ -24,12 +27,14 @@ import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
 import java.io.File;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainApplication extends Application {
     private static MainApplication instance;
     private List<Activity> activityList = new ArrayList<Activity>();
+    private SharedPreferences sp;
 
     /**
      * @return true -
@@ -60,6 +65,8 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        sp = getSharedPreferences(GlobalConstants.PRE_NAME, Context.MODE_PRIVATE);
+        getIPAddress();
         try {
             PhoneUtil phoneUtil=new PhoneUtil(this);
             PackageUtil packageUtil=new PackageUtil(this);
@@ -91,6 +98,25 @@ public class MainApplication extends Application {
         ApplicationInfo info = getApplicationInfo();
     }
 
+
+    private void getIPAddress(){
+
+        String ip=sp.getString("ip","");
+        if(!TextUtils.isEmpty(ip)){
+            GlobalConstants.setRootUrl(ip);
+        }
+
+        String port1=sp.getString("port1","");
+        if(!TextUtils.isEmpty(port1)){
+            GlobalConstants.setDispatchPort(Integer.valueOf(port1));
+        }
+
+        String port2=sp.getString("port2","");
+        if(!TextUtils.isEmpty(port2)){
+            GlobalConstants.setUdpPort(Integer.valueOf(port2));
+        }
+
+    }
 
     public static boolean existSDcard() {
         if (Environment.MEDIA_MOUNTED.equals(Environment

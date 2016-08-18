@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import com.androidquery.util.AQUtility;
 import com.china.ui.SplashActivity;
 
 public class InitActivity extends Activity {
@@ -33,14 +35,14 @@ public class InitActivity extends Activity {
 		} else {
 			isExit = false;
 			finish();
-//			AQUtility.postDelayed(new Runnable() {
-//				@Override
-//				public void run() {
-//					// Kill process
-//					System.exit(0);
-//					// android.os.Process.killProcess(android.os.Process.myPid());
-//				}
-//			}, 500);
+			AQUtility.postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					// Kill process
+					System.exit(0);
+					// android.os.Process.killProcess(android.os.Process.myPid());
+				}
+			}, 500);
 		}
 	}
 
