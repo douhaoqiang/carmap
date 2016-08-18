@@ -103,6 +103,7 @@ public class SelectCarActivity extends Activity implements View.OnClickListener 
                 saveSelectMsg();
                 break;
             case R.id.header_title:
+                //修改请求地址
                 updateIpAddress();
                 break;
 
