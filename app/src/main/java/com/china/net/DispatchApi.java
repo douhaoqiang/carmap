@@ -7,7 +7,6 @@ import com.androidquery.callback.AjaxStatus;
 import com.china.GlobalConstants;
 import com.china.entity.response.CarAndDriverResponse;
 import com.china.entity.response.InitResponse;
-import com.china.entity.response.Response;
 import com.china.entity.response.SaveCarMsgResponse;
 import com.china.entity.response.TaskDetailResponse;
 import com.china.entity.response.WareroomResponse;
@@ -24,7 +23,7 @@ import java.lang.ref.WeakReference;
  * @auther 窦浩强 827809500@qq.com  2015/8/21 0021.
  */
 public class DispatchApi<T> extends BaseProtocol<T> {
-	private static final String TAG = "DispatchApi";
+	private static final String TAG = DispatchApi.class.getSimpleName();
 
 	public DispatchApi(Class<T> type, int... option) {
 		super(type, option);
@@ -41,7 +40,7 @@ public class DispatchApi<T> extends BaseProtocol<T> {
 
 	@Override
 	protected String getRootUrl() {
-		return GlobalConstants.ServerApi;
+		return GlobalConstants.DISPATCH_URL;
 	}
 
 	@Override

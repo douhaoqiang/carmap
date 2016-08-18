@@ -9,6 +9,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 
+import com.china.GlobalConstants;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -46,8 +48,8 @@ public class UDPClient {
 //			116.123456|36.123456|1461555366104|123456789|123.1234564
 			byte[] sendBuf = gpsInfo.getBytes();
 
-			InetAddress addr = InetAddress.getByName("124.205.200.90");
-			int port = 40000;
+			InetAddress addr = InetAddress.getByName(GlobalConstants.getUdpRootUrl());
+			int port = GlobalConstants.getUdpPort();
 //			InetAddress addr = InetAddress.getByName("192.168.203.100");
 //			int port = 60000;
 			// int port = 20160;
