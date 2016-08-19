@@ -10,9 +10,9 @@ import android.text.TextUtils;
 public class GlobalConstants {
 
     public static final String PRE_NAME ="carmap";//偏好的设置名称
-    private static String ROOT_URL ="http://1.119.1.2";//接口地址
-    private static int DISPATCH_PORT=40004;//任务的端口号
-    private static int UDP_PORT=40004;//Udp请求端口号
+    private static String ROOT_URL ="101.200.156.70";//接口地址
+    private static int DISPATCH_PORT=9080;//任务的端口号
+    private static int UDP_PORT=9000;//Udp请求端口号
     public static String token;
     public static String SystemVersion;
     public static String ClientVersionName;
@@ -24,7 +24,7 @@ public class GlobalConstants {
 
 
     public static String getRootUrl() {
-        return ROOT_URL;
+        return "http://"+ROOT_URL;
     }
 
     public static void setRootUrl(String rootUrl) {
@@ -48,7 +48,7 @@ public class GlobalConstants {
      * @return
      */
     public static String getDispatchRootUrl(){
-        return ROOT_URL +":"+DISPATCH_PORT;
+        return getRootUrl() +":"+DISPATCH_PORT;
     }
 
     /**

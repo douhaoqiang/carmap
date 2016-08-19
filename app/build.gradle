@@ -1,15 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'android'
+            keyPassword 'android'
+            storeFile file('F:/android/carmap/app/key/key.jks')
+            storePassword 'android'
+        }
+    }
     compileSdkVersion 16
     buildToolsVersion "23.0.2"
-
     defaultConfig {
         applicationId "com.china"
         minSdkVersion 11
         targetSdkVersion 18
     }
-
     buildTypes {
         release {
             minifyEnabled false

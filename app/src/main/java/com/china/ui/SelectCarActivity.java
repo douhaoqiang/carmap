@@ -104,7 +104,7 @@ public class SelectCarActivity extends Activity implements View.OnClickListener 
                 break;
             case R.id.header_title:
                 //修改请求地址
-                updateIpAddress();
+//                updateIpAddress();
                 break;
 
         }
