@@ -210,6 +210,7 @@ public class CarPathActivity extends Activity implements MapUtil.MapCallBack{
         LatLng nowPosition = new LatLng(gpsInfoVo.getLatitude(), gpsInfoVo.getLongitude());
         if (lastPosition==null || mapUtil.isCanDrawCircle(nowPosition,lastPosition)){
             lastPosition =nowPosition;
+            mapUtil.moveToMyLocation(lastPosition);
             mapUtil.drawLocationMark(nowPosition);
             udpClient.sendLocationMsg(location,phoneUtil.getDeviceId());
         }
