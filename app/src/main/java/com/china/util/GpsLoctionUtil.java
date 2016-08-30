@@ -48,8 +48,6 @@ public class GpsLoctionUtil {
 
         //判断GPS是否正常启动
         if(!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            ToastUtil.show(mContext,"请开启GPS！");
-            LogUtil.i(TAG,"请开启GPS导航...");
             openGpsSetting();
 //            openGPS();
             //返回开启GPS导航设置界面
