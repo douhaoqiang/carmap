@@ -112,6 +112,22 @@ public class MapUtil {
      * 开启定位
      */
     public void startLocate() {
+        startPhoneLocation();
+        startMapLocation();
+    }
+
+
+    /**
+     * 开启手机定位
+     */
+    private void startPhoneLocation(){
+
+    }
+
+    /**
+     * 开启高德定位
+     */
+    private void startMapLocation(){
         //设置定位模式为高精度模式，Battery_Saving为低功耗模式，Device_Sensors是仅设备模式
         mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);
         //设置是否返回地址信息（默认返回地址信息）
@@ -129,6 +145,7 @@ public class MapUtil {
         //启动定位
         mLocationClient.startLocation();
     }
+
 
 
     /**

@@ -242,8 +242,8 @@ public class SelectCarActivity extends Activity implements View.OnClickListener 
 
         Intent intent = new Intent(this, CarPathActivity.class);
         intent.putExtra("taskId", taskId);
-        intent.putExtra("canBack", true);
         startActivity(intent);
+        finish();
 
     }
 

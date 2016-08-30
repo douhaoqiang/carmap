@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'android'
             keyPassword 'android'
-            storeFile file('F:/android/carmap/app/key/key.jks')
+            storeFile file('key/key.jks')
             storePassword 'android'
         }
     }
