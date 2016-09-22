@@ -48,7 +48,8 @@ public class GpsLoctionUtil {
 
         //判断GPS是否正常启动
         if(!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            openGpsSetting();
+            mCallBack.noSwitch();
+
 //            openGPS();
             //返回开启GPS导航设置界面
 //            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
@@ -221,30 +222,13 @@ public class GpsLoctionUtil {
         }
     }
 
-
-    /**
-     * 询问是否进入Gps设置界面
-     */
-    private void openGpsSetting(){
-
-        DialogUtil.showFinishPath(mContext,"请打开GPS确定自己的位置？",new DialogCallBack(){
-            @Override
-            public void ok() {
-                // 转到手机设置界面，用户设置GPS
-                Intent intent = new Intent(
-                        Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                ((Activity)mContext).startActivityForResult(intent, 0); // 设置完成后返回到原来的界面
-            }
-        });
-
-    }
-
     public void onDestroy() {
         lm.removeUpdates(locationListener);
     }
 
     public interface  GpsCallBack{
         void callBack(Location location);
+        void noSwitch();
     }
 
 }
