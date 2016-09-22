@@ -1,6 +1,7 @@
 package com.china.ui;
 
 import android.app.Activity;
+import android.app.Service;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -8,6 +9,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,7 +48,7 @@ public class CarPathActivity extends Activity implements MapUtil.MapCallBack{
     private WeiXinLoadingDialog loadingDialog;
 
     private MyConnection connection;
-
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,8 +65,9 @@ public class CarPathActivity extends Activity implements MapUtil.MapCallBack{
 
         connection=new MyConnection();
 
-        Intent intent = new Intent(this, GpsService.class);
-        bindService(intent, connection, BIND_IMPORTANT);
+        intent = new Intent(this, GpsService.class);
+        boolean result = bindService(intent, connection, BIND_AUTO_CREATE);
+
     }
 
 
@@ -206,13 +209,15 @@ public class CarPathActivity extends Activity implements MapUtil.MapCallBack{
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             //连接成功
-
+            GpsService.MyBind binder = (GpsService.MyBind)service;
+            GpsService bindService = binder.getService();
+            bindService.startLocate();
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
             //连接异常断开
-
+            boolean result = bindService(intent, connection, BIND_AUTO_CREATE);
         }
     }
 
@@ -230,7 +235,6 @@ public class CarPathActivity extends Activity implements MapUtil.MapCallBack{
             mapUtil.drawLocationMark(nowPosition);
             udpClient.sendLocationMsg(amapLocation,phoneUtil.getDeviceId());
         }
-
     }
 
     /**
@@ -267,7 +271,7 @@ public class CarPathActivity extends Activity implements MapUtil.MapCallBack{
     private void drawSendLocation(Location location){
         GpsInfoVo gpsInfoVo = PositionUtil.gps84_To_Gcj02(location.getLatitude(), location.getLongitude());
         LatLng nowPosition = new LatLng(gpsInfoVo.getLatitude(), gpsInfoVo.getLongitude());
-        Toast.makeText(this,"坐标："+gpsInfoVo.getLatitude()+"---"+gpsInfoVo.getLongitude(),Toast.LENGTH_SHORT).show();
+
         if (lastPosition==null || mapUtil.isCanDrawCircle(nowPosition,lastPosition)){
             lastPosition =nowPosition;
             mapUtil.moveToMyLocation(lastPosition);

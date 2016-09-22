@@ -44,6 +44,7 @@
         <activity android:name=".ui.CarPathActivity" />
         <activity android:name=".ui.CarFinishActivity" />
 
+        <service android:name="com.amap.api.location.APSService"></service>
         <service android:name=".service.GpsService"/>
 
     </application>

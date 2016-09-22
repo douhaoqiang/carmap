@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.util.Log;
 
 import com.china.IGpsInterface;
 import com.china.entity.NoSwitch;
@@ -29,13 +30,18 @@ public class GpsService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+
         return new MyBind();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        gpsLoctionUtil.startLocate();
+
         return START_STICKY;
+    }
+
+    public void startLocate(){
+        gpsLoctionUtil.startLocate();
     }
 
     private void init() {
@@ -55,6 +61,10 @@ public class GpsService extends Service {
 
 
     public class MyBind extends IGpsInterface.Stub {
+
+        public GpsService getService(){
+            return GpsService.this;
+        }
 
         @Override
         public void callbackLocation(float latitude, float longitude) throws RemoteException {
