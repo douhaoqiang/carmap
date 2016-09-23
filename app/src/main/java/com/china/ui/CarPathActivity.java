@@ -217,7 +217,7 @@ public class CarPathActivity extends Activity implements MapUtil.MapCallBack{
         @Override
         public void onServiceDisconnected(ComponentName name) {
             //连接异常断开
-            boolean result = bindService(intent, connection, BIND_AUTO_CREATE);
+            boolean result = bindService(intent, connection, BIND_IMPORTANT);
         }
     }
 
